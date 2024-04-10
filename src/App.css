@@ -1,0 +1,145 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+  
+}
+
+h1{
+  
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  
+   
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory y ;
+}
+
+/* logo */
+.logo{
+   margin-top:1%;
+}
+.burger-menu{
+  height: 4vh;
+  display: flex;
+  width:4em;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor:pointer;
+  @media (max-width:768px) {
+   margin-right:20vw;
+  }
+
+}
+
+.burger-bar{
+  height: .4em;
+  width: 2em;
+  background-color: rgb(77, 72, 72);
+  border-radius:.5em  ;
+  
+}
+
+/* sliding menu */
+
+.hidden{
+  display: none;
+}
+.visible{
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap:30px;
+text-align: right;
+ 
+}
+/* animations */
+
+/* clicked */
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.9em, .65em);
+  transition: ease-out 0.5s;
+  @media (max-width:768px) {
+    transform: rotate(45deg) translate(1em, .65em);
+    transition: ease-out 0.5s;
+  }
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0);
+  transition: ease-out 0.5s;
+  @media (max-width:768px){
+    transform: scale(0);
+    transition: ease-out 0.5s;
+  }
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.5em, .28em);
+  transition: ease-out 0.5s;
+  @media (max-width:768px){
+    transform: rotate(135deg) translate(-0.7em, .3em);
+    transition: ease-out 0.5s;
+  }
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0, 0); /* Add values for X and Y axes */
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+
+/*menu-items*/
+
+.menu-items{
+   padding: 10px;
+   list-style: none;
+   text-align: left; 
+   width: 250px;
+   padding-bottom:15px;
+   border-bottom: solid 1px  #9f9f9f;
+  
+}
+
+.menu{
+
+  height: 80vh;
+  width: 24%;
+  position: fixed;
+  left:0%;
+  top:15%;
+  transition: 1s;
+  background-color:  #f8f8f8;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 1000;
+
+  
+  }
+
+
+  .responsive-navbar{
+    display: flex;
+    background-color: rgb(145, 211, 153);
+    height: 10vh;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:0;
+    padding:0;  
+    .logo{
+      margin-right:20%;
+    }
+  }
+  .responsive-burger{
+    margin-right:30%
+  }
+ 
